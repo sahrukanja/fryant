@@ -575,15 +575,15 @@ def bot(op):
                                 if " " in Name:
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
-                                        nadya.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nNgintip Aja Niih. . .\nChat Kek Idiih (-__-)   ")
+                                        nadya.sendText(op.param1, "Woii " + "☞ " + Name + " ☜" + "\nkok cuma ngintip. . .\nMasuk donk 😅   ")
                                         time.sleep(0.2)
                                         summon(op.param1,[op.param2])
                                     else:
-                                        nadya.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nBetah Banget Jadi Penonton. . .\nChat Napa (-__-)   ")
+                                        nadya.sendText(op.param1, "Hai kk " + "☞ " + Name + " ☜" + "\nNgobrol sini . .\nKita ngegosip dulu 😂😂😂   ")
                                         time.sleep(0.2)
                                         summon(op.param1,[op.param2])
                                 else:
-                                    nadya.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nNgapain Kak Ngintip Aja???\nSini Gabung Chat...   ")
+                                    nadya.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nMasuk donk kk?\ntemanin aim curhat sini😄😄   ")
                                     time.sleep(0.2)
                                     summon(op.param1,[op.param2])
                         else:
@@ -792,7 +792,7 @@ def bot(op):
             ginfo = nadya.getGroup(op.param1)
             contact = nadya.getContact(op.param2)
             image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-            nadya.sendText(op.param1,"Hallo " + nadya.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\nBudayakan Cek Note\nDan Semoga Betah Disini ^_^")
+            nadya.sendText(op.param1,"Hallo " + nadya.getContact(op.param2).displayName + "\nSelamat Datang di ☞ " + str(ginfo.name) + " ☜" + "\nSalken yah kk\nN Semoga Betah 🙏")
             c = Message(to=op.param1, from_=None, text=None, contentType=13)
             c.contentMetadata={'mid':op.param2}
             nadya.sendMessage(c)  
@@ -809,7 +809,7 @@ def bot(op):
           if wait["Sambutan"] == True:
             if op.param2 in Creator:
                 return
-            nadya.sendText(op.param1,"Good Bye " + nadya.getContact(op.param2).displayName +  "\nSee You Next Time . . . (p′︵‵。) 🤗")
+            nadya.sendText(op.param1,"Sampai jumpa di lain kesempatan kaka, " + nadya.getContact(op.param2).displayName +  "\nDadah.. Dadah.. 🤗 respon by. fryant")
             d = Message(to=op.param1, from_=None, text=None, contentType=7)
             d.contentMetadata={
                                     "STKID": "13269542",
@@ -854,10 +854,10 @@ def bot(op):
                                   break                              
                               
             if 'MENTION' in msg.contentMetadata.keys() != None:
-                 if wait["detectMention"] == True:
+                 if wait["detectMention1"] == True:
                      contact = nadya.getContact(msg.from_)
                      cName = contact.displayName
-                     balas = ["Dont Tag!! Lagi Sibuk",cName + " Ngapain Ngetag?",cName + " Nggak Usah Tag-Tag! Kalo Penting Langsung Pc Aja","Dia Lagi Off", cName + " Kenapa Tag Saya?","Dia Lagi Tidur\nJangan Di Tag " + cName, "Jangan Suka Tag Gua " + cName, "Kamu Siapa " + cName + "?", "Ada Perlu Apa " + cName + "?","Woii " + cName + " Jangan Ngetag, Riibut!"]
+                     balas = ["Knp sayang, udah kangen lagi yaa😘😘😘",cName + " Jangan tag, kalo ga mau aq hamilin",cName + " Jangan tag Tuan Muda masih meeting","-_-","Sekali tag, berarti naksir aq😇😇😇", cName + " Iya syang, I Love u😘😘😘","Jangan lupa follow id smule ki\Fryant_BSS1 " + cName, "Knp sayang, udah kangen lagi yaa😘😘😘 " + cName, " Kaka mau nikung aku yah???" + cName + "?", "Aih, org ganteng ditag mulu 😂😂😂" + cName + "?","Aih, org ganteng ditag mulu 😂😂😂"]
                      ret_ = random.choice(balas)
                      name = re.findall(r'@(\w+)', msg.text)
                      mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -868,23 +868,23 @@ def bot(op):
                                   break   
                               
             if 'MENTION' in msg.contentMetadata.keys() != None:
-                 if wait["detectMention2"] == True:          
-                    contact = nadya.getContact(msg.from_)
-                    cName = contact.displayName
-                    balas = ["Sekali lagi nge tag gw sumpahin jomblo seumur hidup!","Nggak Usah Tag-Tag! Kalo Penting Langsung Pc Aja","Woii " + cName + " Jangan Ngetag, Riibut!"]
-                    ret_ = random.choice(balas)
-                    name = re.findall(r'@(\w+)', msg.text)
-                    mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                    mentionees = mention['MENTIONEES']
-                    for mention in mentionees:
+                 if wait["detectMention2"] == True:
+                     contact = nadya.getContact(msg.from_)
+                     cName = contact.displayName
+                     balas = ["Knp sayang, udah kangen lagi yaa😘😘😘",cName + " Jangan tag, kalo ga mau aq hamilin",cName + " Jangan tag Tuan Muda masih meeting","-_-","Sekali tag, berarti naksir aq😇😇😇", cName + " Iya syang, I Love u😘😘😘","Jangan lupa follow id smule ki\Fryant_BSS1 " + cName, "Knp sayang, udah kangen lagi yaa😘😘😘 " + cName, " Kaka mau nikung aku yah???" + cName + "?", "Aih, org ganteng ditag mulu 😂😂😂" + cName + "?","Aih, org ganteng ditag mulu 😂😂😂"]
+                     ret_ = random.choice(balas)
+                     name = re.findall(r'@(\w+)', msg.text)
+                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                     mentionees = mention['MENTIONEES']
+                     for mention in mentionees:
                            if mention['M'] in Bots:
-                                  nadya.sendText(msg.to,ret_)
+                                  nadya.sendText(msg.to,ret_
                                   msg.contentType = 7   
                                   msg.text = None
                                   msg.contentMetadata = {
-                                                       "STKID": "20001316",
-                                                       "STKPKGID": "1582380",
-                                                       "STKVER": "1" }
+                                                       "STKID": "157",
+                                                       "STKPKGID": "2",
+                                                       "STKVER": "100" }
                                   nadya.sendMessage(msg)                                
                                   break
                               
@@ -892,8 +892,8 @@ def bot(op):
                  if wait["detectMention3"] == True:          
                     contact = nadya.getContact(msg.from_)
                     cName = contact.displayName
-                    balas = ["Woii " + cName + ", Dasar Jones Ngetag Mulu!"]
-                    balas1 = "Ini Foto Sii Jones Yang Suka Ngetag. . ."
+                    balas = ["Sayank " + cName + ", kangen ya...aku lg kerja buat menata masa depan kita"]
+                    balas1 = "Supaya aq dan kamu, bahagia selalu😘😘😘"
                     ret_ = random.choice(balas)
                     image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
                     name = re.findall(r'@(\w+)', msg.text)
@@ -907,9 +907,9 @@ def bot(op):
                                   msg.contentType = 7   
                                   msg.text = None
                                   msg.contentMetadata = {
-                                                       "STKID": "11764508",
-                                                       "STKPKGID": "6641",
-                                                       "STKVER": "1" }
+                                                       "STKID": "157",
+                                                       "STKPKGID": "2",
+                                                       "STKVER": "100" }
                                   nadya.sendMessage(msg)                                
                                   break  
                                   
